@@ -17,10 +17,10 @@
           调用方法&nbsp;
           <a-popover placement="topLeft">
             <template slot="content">
-              <p>Class类调用示例：<code>com.ruoyi.quartz.task.RyTask.ryParams('ry')</code></p>
+              <p>Class类调用示例：<code>com.slong.douyin.quartz.task.DyTask.dyParams('dy')</code></p>
               <p>参数说明：支持字符串，布尔类型，长整型，浮点型，整型</p>
             </template>
-            <span slot="title"> Bean调用示例：<code>ryTask.ryParams('ry')</code></span>
+            <span slot="title"> Bean调用示例：<code>dyTask.dyParams('dy')</code></span>
             <a-icon type="question-circle-o" />
           </a-popover>
         </span>

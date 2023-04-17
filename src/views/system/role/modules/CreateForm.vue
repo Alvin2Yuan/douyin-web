@@ -77,7 +77,7 @@
 
 import { getRole, addRole, updateRole } from '@/api/system/role'
 import { treeselect as menuTreeselect, roleMenuTreeselect } from '@/api/system/menu'
-import { treeFindParentIds } from '@/utils/ruoyi'
+import { treeFindParentIds } from '@/utils/dy'
 
 export default {
   name: 'CreateForm',

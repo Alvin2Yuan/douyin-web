@@ -7,7 +7,7 @@ import { VueAxios } from './axios'
 import { ACCESS_TOKEN } from '@/store/mutation-types'
 import errorCode from '@/utils/errorCode'
 import qs from 'qs'
-import { blobValidate } from '@/utils/ruoyi'
+import { blobValidate } from '@/utils/dy'
 import { saveAs } from 'file-saver'
 
 // 是否显示重新登录

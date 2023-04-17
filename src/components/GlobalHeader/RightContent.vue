@@ -1,18 +1,18 @@
 <template>
   <div :class="wrpCls">
     <a-space size="middle">
-      <a-tooltip placement="bottom">
-        <template slot="title">
-          源码地址
-        </template>
-        <a-icon type="github" @click="toGithub" :style="{ fontSize: '20px' }"/>
-      </a-tooltip>
-      <a-tooltip placement="bottom">
-        <template slot="title">
-          文档地址
-        </template>
-        <a-icon type="question-circle-o" @click="toDoc" :style="{ fontSize: '20px' }"/>
-      </a-tooltip>
+<!--      <a-tooltip placement="bottom">-->
+<!--        <template slot="title">-->
+<!--          源码地址-->
+<!--        </template>-->
+<!--        <a-icon type="github" @click="toGithub" :style="{ fontSize: '20px' }"/>-->
+<!--      </a-tooltip>-->
+<!--      <a-tooltip placement="bottom">-->
+<!--        <template slot="title">-->
+<!--          文档地址-->
+<!--        </template>-->
+<!--        <a-icon type="question-circle-o" @click="toDoc" :style="{ fontSize: '20px' }"/>-->
+<!--      </a-tooltip>-->
       <screenfull />
       <notice-icon v-hasPermi="['system:notice:list']" />
       <avatar-dropdown :menu="showMenu" :current-user="currentUser" :class="prefixCls" />
@@ -57,9 +57,9 @@ export default {
   data () {
     return {
       showMenu: true,
-      currentUser: {},
-      docUrl: 'https://docs.geekera.cn/RuoYi-Antdv/',
-      githubUrl: 'https://github.com/fuzui/RuoYi-Antdv'
+      currentUser: {}
+      // docUrl: 'https://docs.geekera.cn/RuoYi-Antdv/',
+      // githubUrl: 'https://github.com/fuzui/RuoYi-Antdv'
     }
   },
   computed: {
@@ -73,7 +73,7 @@ export default {
   mounted () {
     setTimeout(() => {
       this.currentUser = {
-        name: 'RuoYi'
+        name: 'Admin'
       }
     }, 1500)
   },

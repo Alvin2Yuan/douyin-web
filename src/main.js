@@ -27,7 +27,7 @@ import './utils/filter' // global filter
 import './global.less' // global style
 import { getDicts } from '@/api/system/dict/data'
 import { getConfigKey } from '@/api/system/config'
-import { parseTime, resetForm, addDateRange, selectDictLabel, selectDictLabels, handleTree, tableSorter } from '@/utils/ruoyi'
+import { parseTime, resetForm, addDateRange, selectDictLabel, selectDictLabels, handleTree, tableSorter } from '@/utils/dy'
 import { download } from '@/utils/request'
 
 // 全局方法挂载

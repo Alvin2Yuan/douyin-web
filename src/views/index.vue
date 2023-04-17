@@ -1,18 +1,18 @@
 <template>
   <page-header-wrapper>
-    <template v-slot:content>
-      <div class="page-header-content">
-        <div class="avatar">
-          <a-avatar size="large" :src="avatar"/>
-        </div>
-        <div class="content">
-          <div class="content-title">
-            {{ timeFix }}，{{ nickname }}<span class="welcome-text"></span>
-          </div>
-          <div> {{ postGroup }} | {{ user.dept.deptName }}</div>
-        </div>
-      </div>
-    </template>
+<!--    <template v-slot:content>-->
+<!--      <div class="page-header-content">-->
+<!--        <div class="avatar">-->
+<!--          <a-avatar size="large" :src="avatar"/>-->
+<!--        </div>-->
+<!--        <div class="content">-->
+<!--          <div class="content-title">-->
+<!--            {{ timeFix }}，{{ nickname }}<span class="welcome-text"></span>-->
+<!--          </div>-->
+<!--          <div> {{ postGroup }} | {{ user.dept.deptName }}</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </template>-->
     <template v-slot:extraContent>
     </template>
     <!-- 致谢项目 -->
@@ -23,9 +23,9 @@
             class="project-list"
             style="margin-bottom: 24px;"
             :bordered="false"
-            title="致谢"
+            title="系统概况"
             :body-style="{ padding: 0 }">
-            <a slot="extra">更多推荐</a>
+            <a slot="extra">更多</a>
             <div>
               <a-card-grid class="project-card-grid" :key="i" v-for="(item, i) in projects">
                 <a-card :bordered="false" :body-style="{ padding: 0 }">
@@ -39,26 +39,12 @@
                     </div>
                   </a-card-meta>
                   <div class="project-item">
-                    <a :href="item.website" target="_blank">官网</a>
-                    <a :href="item.downloadUrl" target="_blank" class="download"><a-icon type="cloud-download" /> 源码下载</a>
+<!--                    <a :href="item.website" target="_blank">官网</a>-->
+<!--                    <a :href="item.downloadUrl" target="_blank" class="download"><a-icon type="cloud-download" /> 源码下载</a>-->
                   </div>
                 </a-card>
               </a-card-grid>
             </div>
-          </a-card>
-          <!-- 项目简介 -->
-          <a-card
-            style="width:100%"
-            title="RuoYi-Antdv 简介"
-          >
-            <p><b>RuoYi-Antdv</b>，使用<a href="https://gitee.com/y_project/RuoYi-Vue" target="_blank">RuoYi-Vue</a>作为后端，改其原有Element Ui为Ant Design Vue。将会持续完全适配RuoYi-Vue。</p>
-            <blockquote>
-              <p>RuoYi-Vue是基于SpringBoot，Spring Security，JWT，Vue 的前后端分离权限管理系统。</p>
-              <p>
-                拥有用户管理、部门管理、岗位管理、菜单管理、角色管理、字典管理、参数管理、通知公告、操作日志、登录日志、
-                在线用户、定时任务、代码生成、系统接口、服务监控、在线构建器、连接池监视等功能。
-              </p>
-            </blockquote>
           </a-card>
         </a-col>
         <a-col
@@ -71,25 +57,22 @@
           <!-- 导航 -->
           <a-card title="便捷导航" style="margin-bottom: 24px" :bordered="false" :body-style="{padding: 0}">
             <div class="item-group">
-              <a href="http://ruoyi.vip/" target="_blank">若依</a>
-              <a href="https://www.antdv.com/" target="_blank">Antdv</a>
-              <a href="https://pro.antdv.com/" target="_blank">Antdv-pro</a>
-              <a href="https://www.iconfont.cn/" target="_blank">阿里图标</a>
-              <a href="https://www.wangeditor.com/" target="_blank">wangEditor</a>
+              <a href="http://ruoyi.vip/" target="_blank">我的待办</a>
+              <a href="https://www.antdv.com/" target="_blank">内容发布</a>
             </div>
           </a-card>
           <!-- Github卡片 -->
-          <a-card hoverable style="margin-bottom: 24px">
-            <a href="https://github.com/fuzui/RuoYi-Antdv" target="_blank" slot="cover">
-              <img style="width:100%" src="https://github-readme-stats.vercel.app/api/pin/?username=fuzui&repo=RuoYi-Antdv" >
-            </a>
-          </a-card>
-          <!-- Gitee卡片 -->
-          <a-card hoverable style="margin-bottom: 24px">
-            <a href="https://gitee.com/fuzui/RuoYi-Antdv" target="_blank" slot="cover">
-              <img style="width:100%" src="https://gitee.com/fuzui/RuoYi-Antdv/widgets/widget_card.svg?colors=4183c4,ffffff,ffffff,e3e9ed,666666,9b9b9b" >
-            </a>
-          </a-card>
+<!--          <a-card hoverable style="margin-bottom: 24px">-->
+<!--            <a href="https://github.com/fuzui/RuoYi-Antdv" target="_blank" slot="cover">-->
+<!--              <img style="width:100%" src="https://github-readme-stats.vercel.app/api/pin/?username=fuzui&repo=RuoYi-Antdv" >-->
+<!--            </a>-->
+<!--          </a-card>-->
+<!--          &lt;!&ndash; Gitee卡片 &ndash;&gt;-->
+<!--          <a-card hoverable style="margin-bottom: 24px">-->
+<!--            <a href="https://gitee.com/fuzui/RuoYi-Antdv" target="_blank" slot="cover">-->
+<!--              <img style="width:100%" src="https://gitee.com/fuzui/RuoYi-Antdv/widgets/widget_card.svg?colors=4183c4,ffffff,ffffff,e3e9ed,666666,9b9b9b" >-->
+<!--            </a>-->
+<!--          </a-card>-->
         </a-col>
       </a-row>
     </div>
@@ -144,22 +127,22 @@ export default {
       projects: [
         {
           logo: ruoyiLogo,
-          name: 'RuoYi-Vue',
-          description: '基于SpringBoot，Spring Security，JWT，Vue & Element 的前后端分离权限管理系统。',
+          name: '抖音热点',
+          description: '查看抖音热点视频',
           website: 'http://ruoyi.vip',
           downloadUrl: 'https://gitee.com/y_project/RuoYi-Vue'
         },
         {
           logo: antdvLogo,
-          name: 'Ant Design Vue',
-          description: 'An enterprise-class UI components based on Ant Design and Vue. ',
+          name: '抖店运营',
+          description: '查看抖店运营数据',
           website: 'https://antdv.com',
           downloadUrl: 'https://github.com/vueComponent/ant-design-vue/'
         },
         {
           logo: antdvLogo,
-          name: 'Antd Pro Vue',
-          description: 'An out-of-box UI solution for enterprise applications as a Vue boilerplate. based on Ant Design of Vue.',
+          name: '抖店热销',
+          description: '查看抖店热销商品',
           website: 'https://pro.antdv.com',
           downloadUrl: 'https://github.com/vueComponent/ant-design-vue/'
         }

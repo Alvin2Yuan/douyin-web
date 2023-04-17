@@ -141,7 +141,7 @@ export const generator = (routerMap, parent, routers) => {
         title: title,
         icon: allIcon[icon + 'Icon'] || icon,
         hiddenHeaderContent: hiddenHeaderContent,
-        // 目前只能通过判断path的http链接来判断是否外链，适配若依
+        // 目前只能通过判断path的http链接来判断是否外链，适配后台
         target: validURL(item.path) ? '_blank' : '',
         permission: item.name,
         keepAlive: noCache === undefined ? false : !noCache,
@@ -155,7 +155,7 @@ export const generator = (routerMap, parent, routers) => {
     if (show === false) {
       currentRouter.hidden = true
     }
-    // 适配若依，若依为缩写路径，而antdv-pro的pro-layout要求每个路径需为全路径
+    // 适配后台，后台为缩写路径，而前端的pro-layout要求每个路径需为全路径
     if (!constantRouterComponents[item.component || item.key]) {
       // currentRouter.path = `${parent && parent.path !== '/' && parent.path || ''}/${item.path}`
       currentRouter.path = `${parent && parent.path !== '/' && parent.path + '/' || ''}${item.path}`

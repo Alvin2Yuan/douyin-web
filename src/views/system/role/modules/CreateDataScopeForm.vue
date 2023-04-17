@@ -65,7 +65,7 @@
 <script>
 
 import { getRole, dataScope, deptTreeSelect } from '@/api/system/role'
-import { treeFindParentIds } from '@/utils/ruoyi'
+import { treeFindParentIds } from '@/utils/dy'
 
 export default {
   name: 'CreateDataScopeForm',

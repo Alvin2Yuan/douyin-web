@@ -26,7 +26,7 @@
               生成包路径
               <a-tooltip>
                 <template slot="title">
-                  生成在哪个java包下，例如 com.ruoyi.system
+                  生成在哪个java包下，例如 com.slong.douyin.system
                 </template>
                 <a-icon type="question-circle-o" />
               </a-tooltip>
